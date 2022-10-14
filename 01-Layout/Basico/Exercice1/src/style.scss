@@ -1,0 +1,40 @@
+@use "./base" as b;
+
+html {
+  height: 100vh;  
+
+  body {
+    margin: 0;
+    padding: 0;
+
+    main {
+      margin-top: 15px;
+      display: grid;
+      grid-template-rows: repeat(3, auto);
+      row-gap: 10px;
+
+      @for $i from 1 through 3 {
+        .container-#{ $i } {
+          height: 100%;
+          display: grid;
+          grid-template-columns: repeat(9, auto);
+          justify-content: center;
+          align-items: center;    
+          column-gap: 10px;
+      
+          & .box {
+            @if #{ $i } == "1" {
+              @include b.boxCreate(b.$first-color, $i);
+            } @else if #{ $i } == "2" {
+              @include b.boxCreate(b.$second-color, $i);
+            } @else {
+              @include b.boxCreate(b.$third-color, $i);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+

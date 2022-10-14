@@ -1,0 +1,174 @@
+html {
+  height: 100vh;
+}
+html body {
+  margin: 0;
+  padding: 0;
+}
+html body main {
+  margin-top: 15px;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  row-gap: 10px;
+}
+html body main .container-1 {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(9, auto);
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+html body main .container-1 .box {
+  padding: 35px 10px;
+  border-radius: 3px;
+  color: #d1d1d1;
+}
+html body main .container-1 .box.darken-1 {
+  background-color: #b73737;
+}
+html body main .container-1 .box.lighten-1 {
+  background-color: #cc5555;
+}
+html body main .container-1 .box.base-color {
+  background-color: rgb(198, 65, 65);
+  color: white;
+}
+html body main .container-1 .box.darken-2 {
+  background-color: #a33131;
+}
+html body main .container-1 .box.lighten-2 {
+  background-color: #d26868;
+}
+html body main .container-1 .box.base-color {
+  background-color: rgb(198, 65, 65);
+  color: white;
+}
+html body main .container-1 .box.darken-3 {
+  background-color: #8f2b2b;
+}
+html body main .container-1 .box.lighten-3 {
+  background-color: #d87c7c;
+}
+html body main .container-1 .box.base-color {
+  background-color: rgb(198, 65, 65);
+  color: white;
+}
+html body main .container-1 .box.darken-4 {
+  background-color: #7c2525;
+}
+html body main .container-1 .box.lighten-4 {
+  background-color: #de8f8f;
+}
+html body main .container-1 .box.base-color {
+  background-color: rgb(198, 65, 65);
+  color: white;
+}
+html body main .container-2 {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(9, auto);
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+html body main .container-2 .box {
+  padding: 35px 10px;
+  border-radius: 3px;
+  color: #a3a3a3;
+}
+html body main .container-2 .box.darken-1 {
+  background-color: #2d439a;
+}
+html body main .container-2 .box.lighten-1 {
+  background-color: #3955c2;
+}
+html body main .container-2 .box.base-color {
+  background-color: rgb(51, 76, 174);
+  color: white;
+}
+html body main .container-2 .box.darken-2 {
+  background-color: #273b87;
+}
+html body main .container-2 .box.lighten-2 {
+  background-color: #4a64ca;
+}
+html body main .container-2 .box.base-color {
+  background-color: rgb(51, 76, 174);
+  color: white;
+}
+html body main .container-2 .box.darken-3 {
+  background-color: #223273;
+}
+html body main .container-2 .box.lighten-3 {
+  background-color: #5e75d0;
+}
+html body main .container-2 .box.base-color {
+  background-color: rgb(51, 76, 174);
+  color: white;
+}
+html body main .container-2 .box.darken-4 {
+  background-color: #1c2a5f;
+}
+html body main .container-2 .box.lighten-4 {
+  background-color: #7186d6;
+}
+html body main .container-2 .box.base-color {
+  background-color: rgb(51, 76, 174);
+  color: white;
+}
+html body main .container-3 {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(9, auto);
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+html body main .container-3 .box {
+  padding: 35px 10px;
+  border-radius: 3px;
+  color: #757575;
+}
+html body main .container-3 .box.darken-1 {
+  background-color: #1d7f5d;
+}
+html body main .container-3 .box.lighten-1 {
+  background-color: #27a97b;
+}
+html body main .container-3 .box.base-color {
+  background-color: rgb(34, 148, 108);
+  color: white;
+}
+html body main .container-3 .box.darken-2 {
+  background-color: #186b4e;
+}
+html body main .container-3 .box.lighten-2 {
+  background-color: #2cbd8a;
+}
+html body main .container-3 .box.base-color {
+  background-color: rgb(34, 148, 108);
+  color: white;
+}
+html body main .container-3 .box.darken-3 {
+  background-color: #14563f;
+}
+html body main .container-3 .box.lighten-3 {
+  background-color: #32d099;
+}
+html body main .container-3 .box.base-color {
+  background-color: rgb(34, 148, 108);
+  color: white;
+}
+html body main .container-3 .box.darken-4 {
+  background-color: #0f412f;
+}
+html body main .container-3 .box.lighten-4 {
+  background-color: #47d5a3;
+}
+html body main .container-3 .box.base-color {
+  background-color: rgb(34, 148, 108);
+  color: white;
+}
+
+/*# sourceMappingURL=/style.97fcb138.css.map */

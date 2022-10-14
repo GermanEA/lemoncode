@@ -1,0 +1,27 @@
+$first-color: rgb(198, 65, 65);
+$second-color: rgb(51, 76, 174);
+$third-color: rgb(34, 148, 108);
+$text-primary-color: white;
+$text-secondary-color: grey;
+$percentaje: 5%;
+$numBoxes: 4;
+
+@mixin boxCreate($color, $index) {
+  padding: 35px 10px;
+  border-radius: 3px;
+  color: darken($text-primary-color, $index * 18%);
+
+  @for $i from 1 through $numBoxes {
+    &.darken-#{ $i } {
+      background-color: darken($color, $i * $percentaje);
+    }
+    &.lighten-#{ $i } {
+      background-color: lighten($color, $i * $percentaje);
+    }
+    &.base-color {
+      background-color: $color;
+      color: $text-primary-color;
+    }
+  }
+}
+
