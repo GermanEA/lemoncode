@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto&display=swap');
+
+$base-color: red;
+$important-color: darken($base-color, 15%);
+$warning-color: lighten($base-color, 15%);
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font: 'Roboto', sans-serif;
+$shadow: -8px 11px 8px 1px rgba(0,0,0,0.45);
+$black-color: #202020;

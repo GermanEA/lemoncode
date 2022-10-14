@@ -1,0 +1,56 @@
+@use './base-blue' as b;
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .btn {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+        border: 1px solid b.$black-color;
+        border-radius: 3px;      
+        box-sizing: border-box;
+        margin-bottom: 2px;
+        font-size: 1.2rem;
+        font-family: b.$secondary-font;
+
+        &.btn-base {
+            background-color: b.$base-color;
+        }
+    
+        &.btn-important {
+            background-color: b.$important-color;
+        }
+    
+        &.btn-warning {
+            background-color: b.$warning-color;
+        }
+
+        &.box-shadow {
+            box-shadow: b.$shadow;
+            -webkit-box-shadow: b.$shadow; 
+        }
+    }
+
+    .text {
+        box-sizing: border-box;
+        width: 300px;
+
+        &.text-primary {
+            margin: 30px 0px 15px 0px;
+            font-family: b.$primary-font;
+        }
+    
+        &.text-secondary {
+            margin: 15px 0px 30px 0px;
+            font-family: b.$secondary-font;
+        }
+    }
+}
+    
