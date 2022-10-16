@@ -1,0 +1,206 @@
+@use "base" as b;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-family: b.$primary-font;
+    color: b.$black-color;
+    background-color: b.$background-color;   
+
+    .grid-container {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header header"
+            "content content"
+            "footer footer";
+
+        @media screen and (max-width: 768px) {
+            grid-template-areas:
+                "header"
+                "content"
+                "footer"
+        }
+         
+        header {
+            grid-area: header;
+
+            .toolbar {
+                @include b.flex(row, space-between, center);
+                background-color: b.$white-color;
+                box-sizing: border-box;
+                padding: b.$general-padding;
+
+                input {
+                    padding: 5px;
+                    border: 1px solid b.$grey-color;
+                    border-radius: b.$border-radius;                    
+
+                    &:focus, &:focus-visible {
+                        outline: 2px solid b.$primary-color;
+                        outline-offset: -2px;
+                        transition: outline-offset 200ms ease;
+                    }
+                }
+
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+
+            .page-title {
+                background-color: b.$primary-color;
+                color: b.$white-color;
+                font-size: 1.3rem;
+                padding: b.$general-padding;
+            }
+        }
+    
+        .page-container {
+            grid-area: content;
+            height: 100%;
+            // margin-bottom: 46px; // Descomentar si queremos el footer fixed
+            display: flex;
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                // margin-bottom: 0; // Descomentar si queremos el footer fixed
+            }
+                        
+            nav {
+                width: 200px;
+                min-width: 200px;
+                background-color: b.$third-color;
+
+                @media screen and (max-width: 768px) {
+                    width: 100%;                    
+                    position: sticky;
+                    top: 0;
+                }
+
+                .menu-container {
+                    @include b.flex(column, center, flex-start);
+                    position: sticky;
+                    top: 0;
+
+                    .menu-title {
+                        color: b.$white-color;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        align-self: center;
+                        padding: b.$general-padding;
+
+                        @media screen and (max-width: 768px) {
+                            display: none;
+                        }
+                    }
+
+                    ul {
+                        width: 100%;
+
+                        @media screen and (max-width: 768px) {
+                            @include b.flex(row, space-between, center);
+                            box-sizing: border-box;
+                            padding: 10px;
+                            gap: 5px;
+                        }
+
+                        li {
+                            width: 100%;
+                            background-color: b.$secondary-color;
+                            border-width: 0px 1px 1px 0px; 
+                            border-style: solid;
+                            border-color: b.$grey-color;
+                            box-sizing: border-box;
+                            cursor: pointer;
+                            padding: b.$general-padding;
+                            transition: all 0.2s ease;
+
+                            &:hover {
+                                background-color: b.$primary-color;
+                                color: b.$white-color;
+                            }
+
+                            @media screen and (max-width: 768px) {
+                                max-width: 100px;
+                                border: 1px solid;                                
+                                text-align: center;                                
+                                padding: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        
+            main {
+                padding: 30px;
+
+                @media screen and (max-width: 768px) {
+                    padding: 15px;
+                }
+
+                .list {
+                    @include b.flex(row, space-evenly, flex-start);
+                    flex-wrap: wrap;
+                    gap: 15px;
+
+                    @media screen and (max-width: 768px) {
+                        gap: 5px;
+                    }                    
+
+                    .card {
+                        @include b.flex(column, space-evenly, center);
+                        width: 240px;
+                        height: 175px;
+                        background-color: b.$white-color;
+                        border: 1px solid b.$grey-color;
+                        border-radius: b.$border-radius;
+                        box-sizing: border-box;
+                        font-size: 0.9rem;
+
+                        @media screen and (max-width: 768px) {
+                            @include b.flex(row, flex-start, center);
+                            height: auto;
+                            border: none;
+                            border-radius: 0px;
+                            padding: 15px;
+                        }
+
+                        .image {
+                            width: 96px;
+                            height: 96px;
+
+                            img {
+                                @include b.image-responsive();
+                                border-radius: 50%;                            
+                            }
+                        }
+
+                        .member-name {
+                            padding: 0px 15px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    
+        footer {
+            grid-area: footer;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: b.$secondary-color;
+            padding: b.$general-padding;
+            // position: fixed; // Descomentar si queremos el footer fixed
+            // bottom: 0; // Descomentar si queremos el footer fixed
+
+            @media screen and (max-width: 768px) {
+                position: inherit;
+            }
+        }
+    }
+
+}

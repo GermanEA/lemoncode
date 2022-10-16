@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+// COLORS
+$primary-color: #006a7b;
+$seconday-color: #2f4858;
+$white-color: #fff;
+$black-color: #1e1e1e;
+$border-color: #bcbcbc;
+$background-color: #e2e2e2;
+$success-color: #7abe47;
+$darken-precentage: 15%;
+
+// FONTS
+$primary-font: 'Roboto', sans-serif;
+
+// CARD
+$card-items-padding: 15px 0;
+
+// MIXIN
+@mixin flex($flexDirection, $justify, $align, $width: 100%) {
+    width: $width;
+    display: flex;
+    flex-direction: $flexDirection;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin image-responsive() {
+    width: 100%;
+    height: auto;
+}

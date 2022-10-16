@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #e2e2e2;
+}
+
+main {
+  padding: 15px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: auto;
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+.card {
+  width: calc(25% - 15px);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  row-gap: 0px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.card__image {
+  width: 100%;
+}
+.card__image img {
+  width: 100%;
+  height: auto;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  font-weight: 300;
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  border-color: #bcbcbc;
+}
+.card__content__title {
+  font-size: 2rem;
+  padding: 15px 0;
+}
+.card__content__description {
+  font-size: 1rem;
+  line-height: 30px;
+  padding: 15px 0;
+}
+.card__content__date {
+  padding: 15px 0;
+  margin-top: 15px;
+  font-size: 1.1rem;
+  align-self: flex-end;
+}
+.card__content__date span:first-child {
+  font-weight: 700;
+}
+.card__content__date span:last-child {
+  color: #7abe47;
+}
+.card__content__btn {
+  color: #fff;
+  background-color: #7abe47;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.card__content__btn:hover {
+  background-color: #568830;
+}
+
+/*# sourceMappingURL=/style.97fcb138.css.map */
