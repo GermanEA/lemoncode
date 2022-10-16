@@ -1,0 +1,13 @@
+$primary-color: #006a7b;
+$seconday-color: #2f4858;
+$white-color: #fff;
+$black-color: #1e1e1e;
+$primary-font: Arial, Helvetica, sans-serif;
+
+@mixin flex($flexDirection, $justify, $align, $width: 100%) {
+    width: $width;
+    display: flex;
+    flex-direction: $flexDirection;
+    justify-content: $justify;
+    align-items: $align;
+}

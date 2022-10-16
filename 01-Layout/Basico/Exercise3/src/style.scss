@@ -1,0 +1,47 @@
+@use "base" as b;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: b.$primary-font;
+    color: b.$black-color;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .top-bar {
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 15px 0;
+    }
+
+    nav .menu__wrapper {
+        @include b.flex(row, space-between, center);
+        box-sizing: border-box;
+        background-color: b.$primary-color;
+        color: b.$white-color;
+
+        .menu__item {
+            padding: 15px;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                background-color: b.$seconday-color;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            @include b.flex(column, center, stretch);
+            font-weight: 600;
+
+            .menu__item {
+                text-align: center;
+            }
+        }
+    }
+
+}
