@@ -8,7 +8,7 @@ main {
     padding: 15px;
 }
 .container {
-    @include b.flex(row, flex-start, flex-start);
+    @include b.flex(row, space-around, flex-start);
     flex-wrap: wrap;
     margin: auto;
     gap: 15px;
@@ -16,7 +16,8 @@ main {
 }
 
 .card {
-    width: calc(25% - 15px);
+    width: calc(25% - 15px);    
+    min-width: 400px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
