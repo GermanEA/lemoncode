@@ -1,0 +1,253 @@
+@use "base" as b;
+
+body {
+    @include b.flex(column, flex-start, flex-start);
+    background-color: b.$background-color;
+    color: b.$white-color;
+    font-family: b.$primary-font;
+    box-sizing: border-box;
+}
+
+header {
+    @include b.flex(row, space-between, center);
+    background-color: b.$background-color;        
+    box-sizing: border-box;    
+    padding: b.$general-padding;
+    margin-bottom: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    @media screen and (max-width: 800px) {
+        margin-bottom: 0;
+    }
+
+    .header-logo {
+        @include b.flex(row, flex-start, center);
+            
+        .image-wrapper {
+            width: 140px;
+            height: 124px;
+            margin: 15px 0px;
+            box-sizing: border-box;
+
+            @media screen and (max-width: 800px) {
+                width: 110px;
+                height: 100px;
+                margin: 0;
+            }
+
+            @media screen and (max-width: 530px) {
+                width: 80px;
+                height: 70px;
+            }
+
+            img {
+                @include b.image-responsive();
+            }
+        }
+
+        .platform-title {
+            margin-left: 15px;
+            font-size: 1.6rem;
+
+            @media screen and (max-width: 1280px) {
+                display: none;
+            }
+        }
+    }
+
+    .header-buttons {
+        @include b.flex(row, flex-end, center);  
+        font-size: 0.8rem;      
+        gap: 10px;
+
+        div {
+            padding: b.$btn-padding;
+            border-radius: 3px;
+            text-align: center;
+
+            &:hover {
+                cursor: pointer;                
+                background-color: b.$white-color;
+                color: b.$black-color;
+                font-size: 1rem; 
+            }
+        }
+    }
+}
+
+main {
+    @include b.flex(column, flex-start, flex-start);    
+    padding: b.$general-padding;
+    font-size: 1.2rem;                
+    counter-reset: topItems;    
+    box-sizing: border-box;
+
+    .section-title {
+        font-size: b.$title-size;
+        margin-bottom: 5px;
+
+        @media screen and (max-width: 530px) {
+            font-size: 2rem;
+        }
+        
+        #top-text {
+    
+            &:before {
+                content: counter(topItems);
+                font-weight: bold;
+            }
+        }
+    }
+
+    .top-wrapper {
+        @include b.flex(column-reverse, flex-start, flex-start);
+
+        .top {
+            @include b.flex(row-reverse, space-between, center);
+            margin-bottom: b.$section-margin;      
+            
+            @media screen and (max-width: 530px) {
+                @include b.flex(column-reverse, flex-end, center);
+            }
+    
+            &-item {
+                min-width: 225px;            
+                counter-increment: topItems;
+    
+                img {
+                    @include b.image-responsive();
+                }
+
+                @media screen and (max-width: 1280px) {
+                    &:first-child, &:nth-child(2) {
+                        display: none;
+                    }
+                }
+
+                @media screen and (max-width: 800px) {
+                    min-width: 165px;
+                }
+            }
+        }    
+    }
+
+    .first {
+        margin-bottom: b.$section-margin;
+    }
+
+    .first, .second {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: auto;        
+        justify-content: center;
+        align-items: center;
+        row-gap: 0px;
+        column-gap: 10px;        
+
+        @media screen and (max-width: 1580px) {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        @media screen and (max-width: 1320px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media screen and (max-width: 1060px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media screen and (max-width: 800px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (max-width: 530px) {
+            grid-template-columns: 1fr;
+        }        
+
+        .item {
+            min-width: 250px;
+            padding: 12px 0px;
+            transition: all .2s ease 0s;
+            z-index: 1;            
+
+            @media screen and (max-width: 530px) {
+                padding: 3px 0px;
+            }
+            
+            &:first-child:hover {
+                transform-origin: left center;
+            }
+
+            &:nth-child(3):hover {
+                transform-origin: center center;
+
+                @media screen and (max-width: 1060px) {                    
+                    transform-origin: right center;
+                }
+            }
+
+            &:nth-child(4):hover {
+                transform-origin: center center;
+
+                @media screen and (max-width: 1320px) {                    
+                    transform-origin: right center;
+                }
+
+                @media screen and (max-width: 1060px) {                    
+                    transform-origin: left center;
+                }
+            }
+
+            &:nth-child(5):hover {
+                transform-origin: center center;
+
+                @media screen and (max-width: 1580px) {
+                    transform-origin: right center;
+                }
+
+                @media screen and (max-width: 1320px) {                    
+                    transform-origin: left center;
+                }
+
+                @media screen and (max-width: 1060px) {                    
+                    transform-origin: center center;
+                }
+            }
+            
+            &:last-child:hover {
+                transform-origin: right center;
+
+                @media screen and (max-width: 1580px) {
+                    transform-origin: left center;
+                }
+        
+                @media screen and (max-width: 1320px) {
+                    transform-origin: center center;
+                }
+
+                @media screen and (max-width: 1060px) {                    
+                    transform-origin: right center;
+                }
+            }
+            
+            &:hover {   
+                cursor: pointer;
+                transition-delay: 0.5s;
+                transform: scale(1.15);
+                z-index: 2;
+
+                @media screen and (max-width: 1024px) {
+                    transform: none;
+                }
+            }
+
+            img {
+                @include b.image-responsive();                
+                border-radius: 5px;
+            }
+        }
+    }
+}

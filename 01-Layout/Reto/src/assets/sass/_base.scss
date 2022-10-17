@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700;900&display=swap');
+
+// COLORS
+$primary-color: #cdde1c;
+$secondary-color: #f9fbe3;
+$third-color: #393e06;
+$background-color: #141414;
+$white-color: #ffffff;
+$black-color: #1e1e1e;
+$grey-color: #ababab;
+
+// FONTS
+$primary-font: 'Jost', sans-serif;
+$title-size: 1.2rem;
+
+// PADDINGS & MARGINS
+$general-padding: 15px;
+$btn-padding: 20px 15px;
+$section-margin: 40px;
+
+// BORDERS
+$border-radius: 3px;
+
+// MIXIN
+@mixin flex($flexDirection, $justify, $align, $width: 100%) {
+    width: $width;
+    display: flex;
+    flex-direction: $flexDirection;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin image-responsive() {
+    width: 100%;
+    height: auto;
+}
