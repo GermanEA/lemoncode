@@ -231,3 +231,181 @@ const dicesInterface = dices();
 dicesInterface.printResult();
 dicesInterface.rollDices();
 dicesInterface.printResult();
+
+console.log("------------- INCLUDES -------------");
+// En ES7 ya existe una función de manejo de arrays llamada `Array.includes()` que indica si un determinado valor figura entre los items de un array dado.
+// Crea una función en ES5 con el mismo comportamiento, es decir, una función que reciba un array y un valor y devuelva un `boolean` indicando si el valor está dentro del array.
+
+function includes(array, value) {
+    let result = false;
+
+    array.forEach((el) => {
+        if(el === value) result = true;    
+    });
+
+    return result;
+}
+
+console.log(includes([1, 2, 3], 3)); // true
+console.log(includes([1, 2, 3], 0)); // false
+
+console.log("------------- INCLUDES CHALLENGE -------------");
+// El ejercicio anterior puede quedar simplificado si utilizas una función de los arrays
+// que devuelve el índice de un elemento dado.
+
+function includesChallenge(array, value) {
+    const result = array.indexOf(value);
+    
+    return result >= 0 ? true : false;
+}
+
+console.log(includesChallenge([1, 2, 3], 3)); // true
+console.log(includesChallenge([1, 2, 3], 0)); // false
+
+console.log("------------- PRIMES -------------");
+// Crea una función tal que, dado un número entero de inicio `from` y otro de fin `to`, encuentre los números primos entre ellos y los muestre por pantalla.
+function showPrimes(from, to) {
+    const arrayNum = fillNumbers(from, to);    
+
+    arrayNum.forEach((el) => {
+        const isPrime = isPrimeNumber(el);        
+        
+        isPrime ? console.log(`${ el } is PRIME!`) : console.log(`${ el } is not a prime`);
+    });
+}
+
+function fillNumbers(from, to) {
+    let arrayNum = [];
+
+    for(let i = from; i <= to; i++ ) {
+        arrayNum.push(i);
+    }
+
+    return arrayNum;
+}
+
+function isPrimeNumber(number) {
+    let isPrime = true;
+
+    if( number > 1 ) {
+        for(let i = 2; i < number; i++) {
+            if( number % i == 0 ) {
+                isPrime = false;
+                break;
+            }
+        }        
+    } else {
+        isPrime = false;
+    }
+    
+    return isPrime;
+}
+
+showPrimes(1, 10);
+
+console.log("------------- REVERSE TEXT -------------");
+// Dado un texto cualquiera, invierte el orden de las palabras.
+function reverseText(text) {
+    return text.split(' ').reverse();
+}
+
+console.log(reverseText("uno dos tres"));
+
+console.log("------------- SUBSETS -------------");
+// Escribe una función que acepte un string como argumento y devuelva todas las partes finales de dicha palabra:
+
+function subsets(word) {
+    let result = [];
+
+    for( let i = 1; i < word.length; i++) {        
+        result.push(word.substr(i));
+    }
+
+    return result;
+}
+
+console.log(subsets("message"));
+
+console.log("------------- SUBSETS -------------");
+// Repite el ejercicio anterior sin utilizar arrays auxiliares ni bucles for/do/while.
+
+function subsetsChallenge(word) {
+    const result = word.map((el, index) => word.substr(index));
+
+    return result;
+}
+
+console.log(subsets("message"));
+
+console.log("------------- ZIP -------------");
+// Crea una función `zipObject` tal que acepte un array de claves como primer argumento y un array de valores como segundo argumento y cuyo objetivo sea crear un objeto uniendo las claves con sus valores.
+// Asumir que el array de claves tiene como mínimo la misma longitud que el de valores:
+
+function zipObject(keys, values) {
+    let obj = {}
+    
+    keys.forEach((el, index) => obj[el] = values[index]);
+
+    return obj;
+}
+
+console.log(zipObject(["spanish", "english", "french"], ["hola", "hi", "salut"]));
+
+console.log("------------- ZIP CHALLENGE -------------");
+// Crea una función `zipObject` tal que acepte un array de claves como primer argumento y un array de valores como segundo argumento y cuyo objetivo sea crear un objeto uniendo las claves con sus valores.
+// Asumir que el array de claves tiene como mínimo la misma longitud que el de valores:
+
+function zipObjectChallenge(keys, values) {
+    let obj = {}
+    
+    keys.forEach((el, index) => {
+        if( values[index] ) obj[el] = values[index];
+    })
+
+    return obj;
+}
+
+console.log(zipObjectChallenge(["spanish", "english", "french"], ["hola"]));
+
+console.log("------------- ZZCRYPT -------------");
+// Descifra el siguiente secreto:
+var secret =
+  "': rg!qg yq,urae: ghsrf wuran shrerg jq,u'qf ra r' ,qaq' er g'q,o rg,fuwurae: m!hfua( t'usqfuq ,:apu(:m xv";
+
+// Sabiendo que el alfabeto original ha sufrido la siguiente transformación:
+var plain = "abcdefghijklmnopqrstuvwxyz:()!¡,'";
+var cipher = "qw,ert(yuio'pa:sdfg!hjklz¡xcv)bnm";
+
+function decrypt(secret) {
+    const code = zipObjectChallenge(cipher.split(''), plain.split(''));
+
+    const result = secret.split('').map(el => code[el] ? code[el] : ' ');
+
+    return result.join('');
+}
+
+console.log(decrypt(secret));
+
+console.log("------------- FIBONACCI -------------");
+// Implementa una función para calcular el n-enésimo termino de la sucesión de Fibonacci. Esta sucesión tiene sus dos primeros términos prefijados:
+
+// ```
+// fib(0) = 0
+// fib(1) = 1
+// ```
+
+// Y a partir de aqui, el siguiente término se calcula a partir de los dos anteriores:
+
+// ```
+// fib(2) = fib(1) + fib(0)
+// ...
+// fib(n + 1) = fib(n) + fib(n - 1)
+// ```
+
+const fib = n => {
+    const result = Array(n).fill(0).reduce((acc, val, i) => acc.concat(i > 1 ? acc[i - 1] + acc[i - 2] : i), []);
+
+    return result[n - 1];
+};
+
+console.log(fib(25));
