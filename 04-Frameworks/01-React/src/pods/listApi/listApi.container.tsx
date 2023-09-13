@@ -12,8 +12,6 @@ export const ListApiContainer: React.FC = () => {
     const [info, setInfo] = React.useState<ApiInfoResponse>()
     const [characters, setCharacters] = React.useState<CharacterEntity[]>([])
     const [loading, setLoading] = React.useState<boolean>(false)
-    // const [inputSearch, setInputSearch] = React.useState<string>(name)
-    // const [pageSelect, setPageSelect] = React.useState<number>(page)
     const param = useDebounce(name, 1000)
 
     React.useEffect(() => {
@@ -40,12 +38,10 @@ export const ListApiContainer: React.FC = () => {
         <ListApi
             info={info}
             page={page}
-            // setPage={setPage}
             characters={characters}
             loading={loading} 
             inputSearch={name}
             setData={setData}
-            // setInputSearch={setInputSearch}
             handleOnClick={handleOnClick}
         />
     )

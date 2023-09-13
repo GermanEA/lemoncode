@@ -12,8 +12,6 @@ interface Props {
     page: number
     loading: boolean
     inputSearch: string
-    // setInputSearch: React.Dispatch<React.SetStateAction<string>>
-    // setPage: React.Dispatch<React.SetStateAction<number>>
     setData: (data: ApiRMData) => void
     handleOnClick: () => void
 }
@@ -24,8 +22,6 @@ export const ListApi: React.FC<Props> = ({
     page,
     loading,
     inputSearch,
-    // setInputSearch,
-    // setPage,
     setData,
     handleOnClick
 }) => {
@@ -37,8 +33,6 @@ export const ListApi: React.FC<Props> = ({
                 info={info}
                 page={page}
                 setData={setData}
-                // setPage={setPage}
-                // setInputSearch={setInputSearch}
                 handleOnClick={handleOnClick}
             />
             

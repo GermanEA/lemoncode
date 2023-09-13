@@ -9,8 +9,6 @@ interface Props {
     inputSearch: string
     info: ApiInfoResponse
     page: number
-    // setPage: React.Dispatch<React.SetStateAction<number>>
-    // setInputSearch: React.Dispatch<React.SetStateAction<string>>
     setData: (data: ApiRMData) => void
     handleOnClick: () => void
 }
@@ -20,8 +18,6 @@ export const Header: React.FC<Props> = ({
     info,
     page,
     setData,
-    // setPage,
-    // setInputSearch,
     handleOnClick
 }) => {
     return (
