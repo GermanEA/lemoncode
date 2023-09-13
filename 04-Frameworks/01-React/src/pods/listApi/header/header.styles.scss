@@ -1,0 +1,29 @@
+@import '../../../global-css/variables';
+
+.listdetail-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: $color-white;
+    border-radius: 5px;
+
+    @media screen and (min-width: 900px) {
+        flex-direction: row;
+    }
+
+    &__pagination {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
+}

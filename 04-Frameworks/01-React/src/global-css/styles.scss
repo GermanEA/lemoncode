@@ -1,0 +1,22 @@
+@import './_reset';
+@import './variables';
+
+body {
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4375em;
+    letter-spacing: 0.00938em;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: $login-bg;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: $color-black;
+    color: $color-corporative
+}

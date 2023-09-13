@@ -1,0 +1,9 @@
+@import '../../global-css/variables';
+
+.container-layout {
+    width: 100vw;
+    height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+    background: $login-bg;
+}

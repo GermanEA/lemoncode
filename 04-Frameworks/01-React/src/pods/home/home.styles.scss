@@ -1,0 +1,40 @@
+@import '../../global-css/variables';
+
+.home-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    &-item {
+        width: 300px;
+        height: 300px;
+        border: 1px solid $color-black;
+        cursor: pointer;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: $color-white;   
+        border-radius: 5px;     
+        transition: all .2s ease;
+
+        &:hover {
+            border-color: $color-corporative;
+            transform: rotate(1deg);
+        }
+
+        &:hover img {
+            opacity: 1;
+        }
+
+        img {
+            opacity: 0.7;
+            transition: all .2s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px; 
+        }
+    }
+}
