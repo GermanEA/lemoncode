@@ -6,9 +6,7 @@ namespace Excepciones
     internal class Program
     {
         public class NumberRandomException : Exception { 
-            public NumberRandomException(string message) : base(message) {
-                Console.WriteLine(message);
-            }
+            public NumberRandomException(string message) : base(message) {}
         }
         private static int Question(int count, int numberRandom, int numberTry, int maxNumber)
         {
@@ -22,13 +20,11 @@ namespace Excepciones
                 if (n > numberRandom)
                 {
                     count++;
-                    Console.WriteLine("El número es más pequeño.");
                     throw new NumberRandomException("El número es más pequeño. Excepción.");
                 }
                 else if (n < numberRandom)
                 {
                     count++;
-                    Console.WriteLine("El número es más grande.");
                     throw new NumberRandomException("El número es más grande. Excepción.");
                 }
                 else
@@ -40,6 +36,10 @@ namespace Excepciones
             catch (NullReferenceException ex)
             {
                 Console.WriteLine("No se puede introducir un valor nulo.");
+            }
+            catch (NumberRandomException ex)
+            {
+                Console.WriteLine(ex.Message);
             }
             catch (FormatException ex)
             {
