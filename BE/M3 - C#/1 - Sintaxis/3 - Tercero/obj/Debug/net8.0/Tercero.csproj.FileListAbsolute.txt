@@ -1,0 +1,15 @@
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Tercero\bin\Debug\net8.0\Tercero.exe
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Tercero\bin\Debug\net8.0\Tercero.deps.json
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Tercero\bin\Debug\net8.0\Tercero.runtimeconfig.json
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Tercero\bin\Debug\net8.0\Tercero.dll
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Tercero\bin\Debug\net8.0\Tercero.pdb
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Tercero\obj\Debug\net8.0\Tercero.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Tercero\obj\Debug\net8.0\Tercero.AssemblyInfoInputs.cache
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Tercero\obj\Debug\net8.0\Tercero.AssemblyInfo.cs
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Tercero\obj\Debug\net8.0\Tercero.csproj.CoreCompileInputs.cache
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Tercero\obj\Debug\net8.0\Tercero.sourcelink.json
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Tercero\obj\Debug\net8.0\Tercero.dll
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Tercero\obj\Debug\net8.0\refint\Tercero.dll
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Tercero\obj\Debug\net8.0\Tercero.pdb
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Tercero\obj\Debug\net8.0\Tercero.genruntimeconfig.cache
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Tercero\obj\Debug\net8.0\ref\Tercero.dll

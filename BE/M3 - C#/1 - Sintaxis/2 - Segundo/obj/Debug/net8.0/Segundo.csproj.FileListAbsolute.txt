@@ -1,0 +1,15 @@
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Segundo\bin\Debug\net8.0\Segundo.exe
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Segundo\bin\Debug\net8.0\Segundo.deps.json
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Segundo\bin\Debug\net8.0\Segundo.runtimeconfig.json
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Segundo\bin\Debug\net8.0\Segundo.dll
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Segundo\bin\Debug\net8.0\Segundo.pdb
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Segundo\obj\Debug\net8.0\Segundo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Segundo\obj\Debug\net8.0\Segundo.AssemblyInfoInputs.cache
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Segundo\obj\Debug\net8.0\Segundo.AssemblyInfo.cs
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Segundo\obj\Debug\net8.0\Segundo.csproj.CoreCompileInputs.cache
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Segundo\obj\Debug\net8.0\Segundo.sourcelink.json
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Segundo\obj\Debug\net8.0\Segundo.dll
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Segundo\obj\Debug\net8.0\refint\Segundo.dll
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Segundo\obj\Debug\net8.0\Segundo.pdb
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Segundo\obj\Debug\net8.0\Segundo.genruntimeconfig.cache
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Segundo\obj\Debug\net8.0\ref\Segundo.dll

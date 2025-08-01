@@ -1,0 +1,15 @@
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Quinto\bin\Debug\net8.0\Quinto.exe
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Quinto\bin\Debug\net8.0\Quinto.deps.json
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Quinto\bin\Debug\net8.0\Quinto.runtimeconfig.json
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Quinto\bin\Debug\net8.0\Quinto.dll
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Quinto\bin\Debug\net8.0\Quinto.pdb
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Quinto\obj\Debug\net8.0\Quinto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Quinto\obj\Debug\net8.0\Quinto.AssemblyInfoInputs.cache
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Quinto\obj\Debug\net8.0\Quinto.AssemblyInfo.cs
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Quinto\obj\Debug\net8.0\Quinto.csproj.CoreCompileInputs.cache
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Quinto\obj\Debug\net8.0\Quinto.sourcelink.json
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Quinto\obj\Debug\net8.0\Quinto.dll
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Quinto\obj\Debug\net8.0\refint\Quinto.dll
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Quinto\obj\Debug\net8.0\Quinto.pdb
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Quinto\obj\Debug\net8.0\Quinto.genruntimeconfig.cache
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Quinto\obj\Debug\net8.0\ref\Quinto.dll

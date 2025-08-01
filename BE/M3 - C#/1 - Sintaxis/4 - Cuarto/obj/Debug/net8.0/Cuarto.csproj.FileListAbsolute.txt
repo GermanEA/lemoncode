@@ -1,0 +1,15 @@
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Cuarto\bin\Debug\net8.0\Cuarto.exe
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Cuarto\bin\Debug\net8.0\Cuarto.deps.json
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Cuarto\bin\Debug\net8.0\Cuarto.runtimeconfig.json
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Cuarto\bin\Debug\net8.0\Cuarto.dll
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Cuarto\bin\Debug\net8.0\Cuarto.pdb
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Cuarto\obj\Debug\net8.0\Cuarto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Cuarto\obj\Debug\net8.0\Cuarto.AssemblyInfoInputs.cache
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Cuarto\obj\Debug\net8.0\Cuarto.AssemblyInfo.cs
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Cuarto\obj\Debug\net8.0\Cuarto.csproj.CoreCompileInputs.cache
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Cuarto\obj\Debug\net8.0\Cuarto.sourcelink.json
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Cuarto\obj\Debug\net8.0\Cuarto.dll
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Cuarto\obj\Debug\net8.0\refint\Cuarto.dll
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Cuarto\obj\Debug\net8.0\Cuarto.pdb
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Cuarto\obj\Debug\net8.0\Cuarto.genruntimeconfig.cache
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Cuarto\obj\Debug\net8.0\ref\Cuarto.dll

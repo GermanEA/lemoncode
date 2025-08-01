@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\GermanEstrade\\OneDrive - Pasiona Consulting S.L\\Documentos\\Lemoncode\\BE\\M3 - C#\\2 - Excepciones\\Excepciones\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8AB68975-4AAB-41CF-8036-043D0EF72BD4}|Excepciones.csproj|c:\\users\\germanestrade\\onedrive - pasiona consulting s.l\\documentos\\lemoncode\\be\\m3 - c#\\2 - excepciones\\excepciones\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8AB68975-4AAB-41CF-8036-043D0EF72BD4}|Excepciones.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\GermanEstrade\\OneDrive - Pasiona Consulting S.L\\Documentos\\Lemoncode\\BE\\M3 - C#\\2 - Excepciones\\Excepciones\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\GermanEstrade\\OneDrive - Pasiona Consulting S.L\\Documentos\\Lemoncode\\BE\\M3 - C#\\2 - Excepciones\\Excepciones\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAIwBkAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T08:55:58.631Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

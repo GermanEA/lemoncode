@@ -1,0 +1,15 @@
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Sexto\bin\Debug\net8.0\Sexto.exe
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Sexto\bin\Debug\net8.0\Sexto.deps.json
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Sexto\bin\Debug\net8.0\Sexto.runtimeconfig.json
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Sexto\bin\Debug\net8.0\Sexto.dll
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Sexto\bin\Debug\net8.0\Sexto.pdb
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Sexto\obj\Debug\net8.0\Sexto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Sexto\obj\Debug\net8.0\Sexto.AssemblyInfoInputs.cache
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Sexto\obj\Debug\net8.0\Sexto.AssemblyInfo.cs
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Sexto\obj\Debug\net8.0\Sexto.csproj.CoreCompileInputs.cache
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Sexto\obj\Debug\net8.0\Sexto.sourcelink.json
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Sexto\obj\Debug\net8.0\Sexto.dll
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Sexto\obj\Debug\net8.0\refint\Sexto.dll
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Sexto\obj\Debug\net8.0\Sexto.pdb
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Sexto\obj\Debug\net8.0\Sexto.genruntimeconfig.cache
+C:\Users\GermanEstrade\OneDrive - Pasiona Consulting S.L\Documentos\Lemoncode\BE\M3 - C#\Sintaxis\Sexto\obj\Debug\net8.0\ref\Sexto.dll
