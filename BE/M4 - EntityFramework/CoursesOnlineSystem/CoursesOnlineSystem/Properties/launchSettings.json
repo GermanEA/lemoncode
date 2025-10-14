@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "MyProfile": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "MYAPP_CONNECTION_STRING": "Server=localhost;Database=coursesSystem;user=sa;password=Lem0nCode!;TrustServerCertificate=true"
+      }
+    }
+  }
+}
