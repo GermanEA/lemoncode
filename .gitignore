@@ -1,3 +1,58 @@
+# Build output
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# dotnet publish
+publish/
+out/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets & environment
+appsettings.Development.json
+appsettings.Production.json
+secrets.json
+*.env
+.env
+
+# Test results
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+# Entity Framework migrations temp files
+*.mdf
+*.ldf
+
+
 **/.cache/
 **/node_modules/
 **/*.pdf
