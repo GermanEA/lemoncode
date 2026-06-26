@@ -3,6 +3,7 @@ using tour_of_heroes_api.Models;
 using Azure.Storage.Blobs;
 using Azure.Storage.Queues;
 using Azure.Storage.Sas;
+using System.Text;
 using System.Text.Json;
 
 namespace tour_of_heroes_api.Controllers
@@ -127,20 +128,34 @@ namespace tour_of_heroes_api.Controllers
         {
             Hero hero = _heroRepository.GetById(id);
 
+            if (hero == null)
+            {
+                return NotFound();
+            }
+
+            /*********** Background process (We have to delete the hero and alter ego images) *************/
+
             // Get the connection string from app settings
             string connectionString = _configuration.GetConnectionString("AzureStorage");
 
             // Instantiate a QueueClient which will be used to create and manipulate the queue
-            var queueClient = new QueueClient(connectionString, "alteregos");
+            var queueClient = new QueueClient(connectionString, "pics-to-delete");
 
-            // Create a queue
+            // Create the queue if it doesn't exist
             await queueClient.CreateIfNotExistsAsync();
 
-            // Create a dynamic object to hold the message
-            var message = $"The hero with name {hero.Name} and alterego {hero.AlterEgo} must be deleted";
+            // Create an object that tells which hero's images (hero + alter ego) must be deleted
+            var message = new
+            {
+                name = hero.Name,
+                alterEgo = hero.AlterEgo
+            };
 
-            // Send the message
-            await queueClient.SendMessageAsync(JsonSerializer.Serialize(message).ToString());
+            // Send the message in base64 so it can also be processed by an Azure Function (Exercise 3)
+            await queueClient.SendMessageAsync(
+                Convert.ToBase64String(Encoding.UTF8.GetBytes(JsonSerializer.Serialize(message))));
+
+            /*********** End Background process *************/
 
             _heroRepository.Delete(id);
 
