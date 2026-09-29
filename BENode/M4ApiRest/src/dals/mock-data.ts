@@ -1,13 +1,28 @@
 import { ObjectId, Decimal128 } from 'mongodb';
 import { House } from './house/index.js';
-
-// Real documents taken from the airbnb backup (only the fields we use)
+import { User } from './user/index.js';
 
 export interface DB {
+  users: User[];
   houses: House[];
 }
 
 export const db: DB = {
+  users: [
+    {
+      _id: new ObjectId(),
+      email: 'admin@email.com',
+      password: 'test',
+      role: 'admin',
+    },
+    {
+      _id: new ObjectId(),
+      email: 'user@email.com',
+      password: 'test',
+      role: 'standard-user',
+    },
+  ],
+  // Real documents taken from the airbnb backup (only the fields we use)
   houses: [
     {
       _id: new ObjectId('65097600a74000a4a4a226ba'),

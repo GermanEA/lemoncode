@@ -39,6 +39,11 @@ puerto `3000`.
 > Si ya habías restaurado antes, revisa que en `/opt/app` del contenedor no haya
 > contenido de backups previos (`docker exec airbnb-db rm -rf /opt/app`).
 
+4. Elegir `seed-users` para crear los usuarios (contraseña hasheada) en la
+   colección `users`:
+   - `admin@email.com` / `test` (rol `admin`)
+   - `user@email.com` / `test` (rol `standard-user`)
+
 ## Endpoints
 
 ### Listado de casas
@@ -106,11 +111,60 @@ Content-Type: application/json
 La fecha se calcula en backend. Respuestas: `201` con la review creada, `400` si
 falta `name` o `comment`, `404` si la casa no existe.
 
+## Opcional (rama `feature/opcional`)
+
+### Login
+
+```
+POST /api/security/login
+Content-Type: application/json
+
+{
+  "email": "admin@email.com",
+  "password": "test"
+}
+```
+
+`204` y deja la cookie `authorization` (JWT, `httpOnly`) o `401` si las
+credenciales no son válidas.
+
+```
+POST /api/security/logout
+```
+
+Borra la cookie `authorization`.
+
+### Actualizar el detalle de una casa (solo admin)
+
+```
+PUT /api/houses/:id
+Cookie: authorization=Bearer ...
+Content-Type: application/json
+
+{
+  "title": "Ribeira Charming Duplex",
+  "image": "https://a0.muscache.com/im/pictures/...jpg?aki_policy=large",
+  "description": "Fantastic duplex apartment...",
+  "address": "Porto, Porto, Portugal",
+  "bedrooms": 3,
+  "beds": 5,
+  "bathrooms": 1
+}
+```
+
+Actualiza solo los campos del detalle (título, imagen, descripción, dirección,
+habitaciones, camas y baños). Respuestas: `204` actualizada, `401` sin sesión,
+`403` si el usuario no es `admin`, `404` si la casa no existe.
+
 ## Tests
 
 ```bash
 npm test
 ```
 
-Unit tests de mappers (`src/pods/house/house.mappers.spec.ts`) y helpers
-(`src/common/helpers/*.spec.ts`, `src/dals/house/house.helpers.spec.ts`).
+- Unit tests de mappers (`src/pods/house/house.mappers.spec.ts`), helpers
+  (`src/common/helpers/*.spec.ts`, `src/dals/house/house.helpers.spec.ts`) y
+  middlewares de seguridad (`src/core/security/security.middlewares.spec.ts`).
+- Tests de integración con `supertest` + `mongodb-memory-server`
+  (`src/pods/house/house.api.spec.ts`, `src/pods/security/security.api.spec.ts`).
+  La primera ejecución descarga el binario de MongoDB.

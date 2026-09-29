@@ -22,6 +22,30 @@ const insertReview = (houseId: string, review: Review): Review => {
   return review;
 };
 
+// Only updates the house detail fields
+const updateHouse = (house: House): boolean => {
+  const id = house._id.toHexString();
+  if (!findHouse(id)) {
+    return false;
+  }
+
+  db.houses = db.houses.map((h) =>
+    h._id.toHexString() === id
+      ? {
+          ...h,
+          name: house.name,
+          description: house.description,
+          images: { ...h.images, picture_url: house.images?.picture_url },
+          address: { ...h.address, street: house.address?.street },
+          bedrooms: house.bedrooms,
+          beds: house.beds,
+          bathrooms: house.bathrooms,
+        }
+      : h
+  );
+  return true;
+};
+
 export const mockRepository: HouseRepository = {
   getHouseList: async (country?: string, page?: number, pageSize?: number) =>
     paginateList(
@@ -42,4 +66,5 @@ export const mockRepository: HouseRepository = {
   },
   insertReview: async (houseId: string, review: Review) =>
     insertReview(houseId, review),
+  updateHouse: async (house: House) => updateHouse(house),
 };

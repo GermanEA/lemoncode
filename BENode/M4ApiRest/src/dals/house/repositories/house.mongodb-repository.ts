@@ -1,7 +1,7 @@
 import { ObjectId } from 'mongodb';
 import { getPagination } from '#common/helpers/index.js';
 import { HouseRepository } from './house.repository.js';
-import { Review } from '../house.model.js';
+import { House, Review } from '../house.model.js';
 import { getHouseContext } from '../house.context.js';
 import { LAST_REVIEWS_COUNT } from '../house.constants.js';
 
@@ -56,5 +56,23 @@ export const mongoDBRepository: HouseRepository = {
       { $push: { reviews: review } }
     );
     return matchedCount === 1 ? review : null;
+  },
+  // Only updates the house detail fields
+  updateHouse: async (house: House) => {
+    const { matchedCount } = await getHouseContext().updateOne(
+      { _id: house._id },
+      {
+        $set: {
+          name: house.name,
+          description: house.description,
+          'images.picture_url': house.images?.picture_url,
+          'address.street': house.address?.street,
+          bedrooms: house.bedrooms,
+          beds: house.beds,
+          bathrooms: house.bathrooms,
+        },
+      }
+    );
+    return matchedCount === 1;
   },
 };

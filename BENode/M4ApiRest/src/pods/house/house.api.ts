@@ -1,8 +1,13 @@
 import { Router } from 'express';
 import { houseRepository } from '#dals/index.js';
 import {
+  authenticationMiddleware,
+  authorizationMiddleware,
+} from '#core/security/index.js';
+import {
   mapHouseListFromModelToApi,
   mapHouseFromModelToApi,
+  mapHouseFromApiToModel,
   mapReviewFromApiToModel,
   mapReviewFromModelToApi,
 } from './house.mappers.js';
@@ -60,4 +65,23 @@ houseApi
     } catch (error) {
       next(error);
     }
-  });
+  })
+  .put(
+    '/:id',
+    authenticationMiddleware,
+    authorizationMiddleware(['admin']),
+    async (req, res, next) => {
+      try {
+        const { id } = req.params;
+        if (await houseRepository.getHouse(id)) {
+          const house = mapHouseFromApiToModel({ ...req.body, id });
+          await houseRepository.updateHouse(house);
+          res.sendStatus(204);
+        } else {
+          res.sendStatus(404);
+        }
+      } catch (error) {
+        next(error);
+      }
+    }
+  );

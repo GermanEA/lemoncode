@@ -1,5 +1,8 @@
 import { ObjectId } from 'mongodb';
-import { mapDecimalToNumber } from '#common/helpers/index.js';
+import {
+  mapDecimalToNumber,
+  mapNumberToDecimal,
+} from '#common/helpers/index.js';
 import * as model from '#dals/index.js';
 import * as apiModel from './house.api-model.js';
 
@@ -50,4 +53,23 @@ export const mapReviewFromApiToModel = (
   date: new Date(),
   reviewer_name: review.name,
   comments: review.comment,
+});
+
+// Only the house detail fields can be updated (reviews are not updated)
+export const mapHouseFromApiToModel = (house: apiModel.House): model.House => ({
+  _id: new ObjectId(house.id),
+  name: house.title,
+  description: house.description,
+  images: {
+    picture_url: house.image,
+  },
+  address: {
+    street: house.address,
+    country: undefined,
+  },
+  bedrooms: house.bedrooms,
+  beds: house.beds,
+  bathrooms: mapNumberToDecimal(house.bathrooms),
+  price: undefined,
+  reviews: undefined,
 });

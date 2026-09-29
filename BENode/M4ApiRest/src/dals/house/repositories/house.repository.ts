@@ -8,4 +8,5 @@ export interface HouseRepository {
   ) => Promise<House[]>;
   getHouse: (id: string) => Promise<House>;
   insertReview: (houseId: string, review: Review) => Promise<Review>;
+  updateHouse: (house: House) => Promise<boolean>;
 }
