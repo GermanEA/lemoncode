@@ -1,0 +1,63 @@
+import { Router } from 'express';
+import { houseRepository } from '#dals/index.js';
+import {
+  mapHouseListFromModelToApi,
+  mapHouseFromModelToApi,
+  mapReviewFromApiToModel,
+  mapReviewFromModelToApi,
+} from './house.mappers.js';
+
+export const houseApi = Router();
+
+const isNotEmptyString = (value: unknown): boolean =>
+  typeof value === 'string' && value.trim() !== '';
+
+houseApi
+  .get('/', async (req, res, next) => {
+    try {
+      const country = req.query.country as string;
+      const page = Number(req.query.page);
+      const pageSize = Number(req.query.pageSize);
+      const houseList = await houseRepository.getHouseList(
+        country,
+        page,
+        pageSize
+      );
+      res.send(mapHouseListFromModelToApi(houseList));
+    } catch (error) {
+      next(error);
+    }
+  })
+  .get('/:id', async (req, res, next) => {
+    try {
+      const { id } = req.params;
+      const house = await houseRepository.getHouse(id);
+      if (house) {
+        res.send(mapHouseFromModelToApi(house));
+      } else {
+        res.sendStatus(404);
+      }
+    } catch (error) {
+      next(error);
+    }
+  })
+  .post('/:id/reviews', async (req, res, next) => {
+    try {
+      const { id } = req.params;
+      const { name, comment } = req.body ?? {};
+      if (!isNotEmptyString(name) || !isNotEmptyString(comment)) {
+        res.sendStatus(400);
+        return;
+      }
+
+      const review = mapReviewFromApiToModel(req.body);
+      const newReview = await houseRepository.insertReview(id, review);
+      if (newReview) {
+        res.status(201).send(mapReviewFromModelToApi(newReview));
+      } else {
+        res.sendStatus(404);
+      }
+    } catch (error) {
+      next(error);
+    }
+  });
