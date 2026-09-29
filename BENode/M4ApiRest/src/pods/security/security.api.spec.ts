@@ -3,7 +3,7 @@ import supertest from 'supertest';
 import { createRestApiServer, dbServer } from '#core/servers/index.js';
 import { ENV } from '#core/constants/index.js';
 import { hash } from '#common/helpers/index.js';
-import { getUserContext } from '#dals/user/user.context.js';
+import { userContext } from '#dals/user/user.context.js';
 import { securityApi } from './security.api.js';
 
 describe('pods/security/security.api specs', () => {
@@ -15,7 +15,7 @@ describe('pods/security/security.api specs', () => {
   });
 
   beforeEach(async () => {
-    await getUserContext().insertOne({
+    await userContext.create({
       _id: new ObjectId(),
       email: 'admin@email.com',
       password: await hash('test'),
@@ -24,7 +24,7 @@ describe('pods/security/security.api specs', () => {
   });
 
   afterEach(async () => {
-    await getUserContext().deleteMany({});
+    await userContext.deleteMany({});
   });
 
   afterAll(async () => {

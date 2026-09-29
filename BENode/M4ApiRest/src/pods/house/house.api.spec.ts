@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken';
 import { createRestApiServer, dbServer } from '#core/servers/index.js';
 import { ENV } from '#core/constants/index.js';
 import { UserSession } from '#core/models/index.js';
-import { getHouseContext } from '#dals/house/house.context.js';
+import { houseContext } from '#dals/house/house.context.js';
 import * as model from '#dals/index.js';
 import * as apiModel from './house.api-model.js';
 import { houseApi } from './house.api.js';
@@ -61,14 +61,14 @@ describe('pods/house/house.api specs', () => {
   });
 
   beforeEach(async () => {
-    await getHouseContext().insertMany([
+    await houseContext.insertMany([
       { ...spainHouse, reviews: [...spainHouse.reviews] },
       { ...portugalHouse, reviews: [...portugalHouse.reviews] },
     ]);
   });
 
   afterEach(async () => {
-    await getHouseContext().deleteMany({});
+    await houseContext.deleteMany({});
   });
 
   afterAll(async () => {
@@ -183,9 +183,11 @@ describe('pods/house/house.api specs', () => {
       expect(new Date(response.body.date).getTime()).toBeGreaterThanOrEqual(
         before
       );
-      const house = await getHouseContext().findOne({
-        _id: portugalHouse._id,
-      });
+      const house = await houseContext
+        .findOne({
+          _id: portugalHouse._id,
+        })
+        .lean();
       expect(house.reviews).toHaveLength(1);
       expect(house.reviews[0].reviewer_name).toEqual('test-name');
     });
@@ -268,9 +270,11 @@ describe('pods/house/house.api specs', () => {
 
       // Assert
       expect(response.statusCode).toEqual(204);
-      const house = await getHouseContext().findOne({
-        _id: portugalHouse._id,
-      });
+      const house = await houseContext
+        .findOne({
+          _id: portugalHouse._id,
+        })
+        .lean();
       expect(house.name).toEqual('updated-title');
       expect(house.images.picture_url).toEqual('updated-picture');
       expect(house.description).toEqual('updated-description');

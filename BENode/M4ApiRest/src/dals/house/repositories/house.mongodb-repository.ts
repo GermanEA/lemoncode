@@ -2,33 +2,31 @@ import { ObjectId } from 'mongodb';
 import { getPagination } from '#common/helpers/index.js';
 import { HouseRepository } from './house.repository.js';
 import { House, Review } from '../house.model.js';
-import { getHouseContext } from '../house.context.js';
+import { houseContext } from '../house.context.js';
 import { LAST_REVIEWS_COUNT } from '../house.constants.js';
 
 export const mongoDBRepository: HouseRepository = {
   getHouseList: async (country?: string, page?: number, pageSize?: number) => {
     const { skip, limit } = getPagination(page, pageSize);
-    return await getHouseContext()
+    return await houseContext
       .find(country ? { 'address.country': country } : {}, {
-        projection: {
-          name: 1,
-          'images.picture_url': 1,
-          price: 1,
-        },
+        name: 1,
+        'images.picture_url': 1,
+        price: 1,
       })
       .skip(skip)
       .limit(limit)
-      .toArray();
+      .lean();
   },
   getHouse: async (id: string) => {
     if (!ObjectId.isValid(id)) {
       return null;
     }
 
-    return await getHouseContext().findOne(
-      { _id: new ObjectId(id) },
+    const [house] = await houseContext.aggregate<House>([
+      { $match: { _id: new ObjectId(id) } },
       {
-        projection: {
+        $project: {
           name: 1,
           description: 1,
           'images.picture_url': 1,
@@ -43,15 +41,16 @@ export const mongoDBRepository: HouseRepository = {
             ],
           },
         },
-      }
-    );
+      },
+    ]);
+    return house ?? null;
   },
   insertReview: async (houseId: string, review: Review) => {
     if (!ObjectId.isValid(houseId)) {
       return null;
     }
 
-    const { matchedCount } = await getHouseContext().updateOne(
+    const { matchedCount } = await houseContext.updateOne(
       { _id: new ObjectId(houseId) },
       { $push: { reviews: review } }
     );
@@ -59,7 +58,7 @@ export const mongoDBRepository: HouseRepository = {
   },
   // Only updates the house detail fields
   updateHouse: async (house: House) => {
-    const { matchedCount } = await getHouseContext().updateOne(
+    const { matchedCount } = await houseContext.updateOne(
       { _id: house._id },
       {
         $set: {

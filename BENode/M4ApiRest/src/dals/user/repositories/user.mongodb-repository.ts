@@ -1,13 +1,15 @@
 import { verifyHash } from '#common/helpers/index.js';
-import { getUserContext } from '../user.context.js';
+import { userContext } from '../user.context.js';
 import { User } from '../user.model.js';
 import { UserRepository } from './user.repository.js';
 
 export const mongoDBRepository: UserRepository = {
   getUser: async (email: string, password: string) => {
-    const user = await getUserContext().findOne({
-      email,
-    });
+    const user = await userContext
+      .findOne({
+        email,
+      })
+      .lean();
 
     if (!user) {
       return null;
