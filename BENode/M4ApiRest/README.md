@@ -113,6 +113,13 @@ falta `name` o `comment`, `404` si la casa no existe.
 
 ## Opcional (rama `feature/opcional`)
 
+> **Extras añadidos** (no pedidos en el enunciado):
+>
+> - Endpoint de logout (`POST /api/security/logout`) que borra la cookie de
+>   sesión.
+> - Console runner `seed-users` para crear los usuarios con contraseña
+>   hasheada.
+
 ### Login
 
 ```
