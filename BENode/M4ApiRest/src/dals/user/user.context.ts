@@ -1,4 +1,10 @@
-import { dbServer } from '#core/servers/index.js';
+import { model, Schema } from 'mongoose';
 import { User } from './user.model.js';
 
-export const getUserContext = () => dbServer?.db.collection<User>('users');
+const userSchema = new Schema<User>({
+  email: { type: Schema.Types.String, required: true },
+  password: { type: Schema.Types.String, required: true },
+  role: { type: Schema.Types.String, required: true },
+});
+
+export const userContext = model<User>('User', userSchema);

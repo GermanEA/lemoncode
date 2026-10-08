@@ -5,7 +5,12 @@ Backend de un portal de reservas de casas sobre el set de datos `airbnb`
 
 Estructura basada en el boilerplate del bootcamp
 (`05-mongo-mongoose/05-boilerplate`): `core`, `common`, `dals` (repositorio
-mock + MongoDB con driver nativo) y `pods` (api-model <-> mapper <-> model).
+mock + MongoDB) y `pods` (api-model <-> mapper <-> model).
+
+> Rama `feature/mongoose`: el repositorio MongoDB está implementado con
+> [Mongoose](https://mongoosejs.com/) (schemas en `src/dals/*/*.context.ts`) en
+> lugar del driver nativo. El resto (endpoints, mappers, tests) es igual que en
+> `feature/opcional`.
 
 ## Arrancar
 
