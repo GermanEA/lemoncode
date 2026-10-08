@@ -6,6 +6,7 @@ import {
   mapHouseFromModelToApi,
   mapReviewListFromModelToApi,
   mapReviewFromApiToModel,
+  mapHouseFromApiToModel,
 } from './house.mappers.js';
 
 const house: model.House = {
@@ -161,6 +162,46 @@ describe('house.mappers spec', () => {
       };
       expect(result).toEqual(expectedResult);
       expect(ObjectId.isValid(result._id)).toBeTruthy();
+    });
+  });
+
+  describe('mapHouseFromApiToModel', () => {
+    it('should return mapped house with only the detail fields when it feeds a house', () => {
+      // Arrange
+      const apiHouse: apiModel.House = {
+        id: '65097600a74000a4a4a229d7',
+        title: 'test-name',
+        image: 'test-picture-url',
+        description: 'test-description',
+        address: 'test-street',
+        bedrooms: 2,
+        beds: 3,
+        bathrooms: 1.5,
+        reviews: [],
+      };
+
+      // Act
+      const result = mapHouseFromApiToModel(apiHouse);
+
+      // Assert
+      const expectedResult: model.House = {
+        _id: new ObjectId('65097600a74000a4a4a229d7'),
+        name: 'test-name',
+        description: 'test-description',
+        images: {
+          picture_url: 'test-picture-url',
+        },
+        address: {
+          street: 'test-street',
+          country: undefined,
+        },
+        bedrooms: 2,
+        beds: 3,
+        bathrooms: Decimal128.fromString('1.5'),
+        price: undefined,
+        reviews: undefined,
+      };
+      expect(result).toEqual(expectedResult);
     });
   });
 });
